@@ -24,42 +24,42 @@ function arrow(side, cx, cy, frameH) {
 }
 
 const POSTER_POOL = [
-  '/assets/slides/poster-1.svg',
-  '/assets/slides/poster-2.svg',
-  '/assets/slides/poster-3.svg',
+  'assets/slides/poster-1.svg',
+  'assets/slides/poster-2.svg',
+  'assets/slides/poster-3.svg',
 ]
 
 // Family archive — 6 photos + audio tracks (chapter 5, Shvarts)
 const ARCHIVE_TRACKS = [
   {
     label: 'Любовь и разлука',
-    photo: '/assets/slides/shvarts-photos/01.jpg',
-    audio: '/assets/audio/shvarts/01-lyubov-i-razluka.mp3',
+    photo: 'assets/slides/shvarts-photos/01.jpg',
+    audio: 'assets/audio/shvarts/01-lyubov-i-razluka.mp3',
   },
   {
     label: 'Звезда пленительного счастья',
-    photo: '/assets/slides/shvarts-photos/02.jpg',
-    audio: '/assets/audio/shvarts/02-zvezda.mp3',
+    photo: 'assets/slides/shvarts-photos/02.jpg',
+    audio: 'assets/audio/shvarts/02-zvezda.mp3',
   },
   {
     label: 'Прогулка',
-    photo: '/assets/slides/shvarts-photos/03.jpg',
-    audio: '/assets/audio/shvarts/03-progulka.mp3',
+    photo: 'assets/slides/shvarts-photos/03.jpg',
+    audio: 'assets/audio/shvarts/03-progulka.mp3',
   },
   {
     label: 'Станционный смотритель',
-    photo: '/assets/slides/shvarts-photos/04.jpg',
-    audio: '/assets/audio/shvarts/04-ne-sprashivay.mp3',
+    photo: 'assets/slides/shvarts-photos/04.jpg',
+    audio: 'assets/audio/shvarts/04-ne-sprashivay.mp3',
   },
   {
     label: 'Белое солнце пустыни',
-    photo: '/assets/slides/shvarts-photos/05.jpg',
-    audio: '/assets/audio/shvarts/05-vereshchagin.mp3',
+    photo: 'assets/slides/shvarts-photos/05.jpg',
+    audio: 'assets/audio/shvarts/05-vereshchagin.mp3',
   },
   {
     label: 'Кавалергарда век недолог',
-    photo: '/assets/slides/shvarts-photos/06.webp',
-    audio: '/assets/audio/shvarts/06-kavalergarda.mp3',
+    photo: 'assets/slides/shvarts-photos/06.webp',
+    audio: 'assets/audio/shvarts/06-kavalergarda.mp3',
   },
 ]
 
@@ -68,33 +68,33 @@ const ARCHIVE_TRACKS = [
 const DASHKEVICH_TRACKS = [
   {
     label: 'Шерлок Холмс · Увертюра',
-    photo: '/assets/slides/dashkevich-photos/01.jpg',
-    audio: '/assets/audio/dashkevich/01-sherlock.mp3',
+    photo: 'assets/slides/dashkevich-photos/01.jpg',
+    audio: 'assets/audio/dashkevich/01-sherlock.mp3',
   },
   {
     label: 'Бумбараш · Ходят кони',
-    photo: '/assets/slides/dashkevich-photos/02.jpg',
-    audio: '/assets/audio/dashkevich/02-bumbarash.mp3',
+    photo: 'assets/slides/dashkevich-photos/02.jpg',
+    audio: 'assets/audio/dashkevich/02-bumbarash.mp3',
   },
   {
     label: 'Как стать счастливым · Танец',
-    photo: '/assets/slides/dashkevich-photos/03.jpg',
-    audio: '/assets/audio/dashkevich/03-zimnyaya.mp3',
+    photo: 'assets/slides/dashkevich-photos/03.jpg',
+    audio: 'assets/audio/dashkevich/03-zimnyaya.mp3',
   },
   {
     label: 'Собачье сердце · Главная тема',
-    photo: '/assets/slides/dashkevich-photos/04.jpg',
-    audio: '/assets/audio/dashkevich/04-sobachie.mp3',
+    photo: 'assets/slides/dashkevich-photos/04.jpg',
+    audio: 'assets/audio/dashkevich/04-sobachie.mp3',
   },
   {
     label: 'Бумбараш · Марш 4-й роты',
-    photo: '/assets/slides/dashkevich-photos/05.jpg',
-    audio: '/assets/audio/dashkevich/05-marsh.mp3',
+    photo: 'assets/slides/dashkevich-photos/05.jpg',
+    audio: 'assets/audio/dashkevich/05-marsh.mp3',
   },
   {
     label: 'Тень · Тень ушла',
-    photo: '/assets/slides/dashkevich-photos/06.jpg',
-    audio: '/assets/audio/dashkevich/06-shadow.mp3',
+    photo: 'assets/slides/dashkevich-photos/06.jpg',
+    audio: 'assets/audio/dashkevich/06-shadow.mp3',
   },
 ]
 
@@ -121,7 +121,7 @@ export const CHAPTERS = [
   {
     id: 'ch1',
     title: 'Глава 1 · Петербург — город кино и музыки',
-    src: '/assets/chapter-1-petersburg.svg',
+    src: 'assets/chapter-1-petersburg.svg',
     width: W,
     height: CH1_H,
     arrows: [
@@ -147,14 +147,14 @@ export const CHAPTERS = [
   {
     id: 'ch2',
     title: 'Глава 2 · Владимир Дашкевич',
-    src: '/assets/chapter-2-dashkevich.svg',
+    src: 'assets/chapter-2-dashkevich.svg',
     width: W,
     height: CH2_H,
   },
   {
     id: 'ch6',
     title: 'Музыка Владимира Дашкевича · Семейный архив',
-    src: '/assets/chapter-6-dashkevich-archive.svg',
+    src: 'assets/chapter-6-dashkevich-archive.svg',
     width: W,
     height: CH6_H,
     arrows: [
@@ -170,14 +170,14 @@ export const CHAPTERS = [
   {
     id: 'ch3',
     title: 'Глава 3 · Исаак Шварц',
-    src: '/assets/chapter-3-shvarts.svg',
+    src: 'assets/chapter-3-shvarts.svg',
     width: W,
     height: CH3_H,
   },
   {
     id: 'ch4',
     title: 'Глава 4 · По следам Исаака Шварца',
-    src: '/assets/chapter-4-routes.svg',
+    src: 'assets/chapter-4-routes.svg',
     width: W,
     height: CH4_H,
     video: {
@@ -191,7 +191,7 @@ export const CHAPTERS = [
   {
     id: 'ch5',
     title: 'Музыка Исаака Шварца · Семейный архив',
-    src: '/assets/chapter-5-archive.svg',
+    src: 'assets/chapter-5-archive.svg',
     width: W,
     height: CH5_H,
     arrows: [
