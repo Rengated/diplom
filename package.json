@@ -27,7 +27,8 @@
   },
   "build": {
     "appId": "ru.shvarts.longread",
-    "productName": "Шварц · Музыка кино",
+    "productName": "Shvarts Music Cinema",
+    "artifactName": "shvarts-longread-${version}-${os}-${arch}.${ext}",
     "directories": {
       "output": "release"
     },
@@ -36,6 +37,10 @@
       "electron/**/*"
     ],
     "win": { "target": "nsis" },
+    "nsis": {
+      "shortcutName": "Шварц",
+      "uninstallDisplayName": "Шварц · Музыка кино"
+    },
     "mac": { "target": "dmg" },
     "linux": { "target": "AppImage" }
   }
