@@ -27,6 +27,9 @@ const POSTER_POOL = [
   'assets/slides/poster-1.svg',
   'assets/slides/poster-2.svg',
   'assets/slides/poster-3.svg',
+  ...Array.from({ length: 22 }, (_, i) =>
+    `assets/slides/posters/poster-extra-${String(i + 1).padStart(2, '0')}.jpg`
+  ),
 ]
 
 // Family archive — 6 photos + audio tracks (chapter 5, Shvarts)
@@ -120,10 +123,12 @@ function cassettes(frameH) {
 export const CHAPTERS = [
   {
     id: 'ch1',
-    title: 'Глава 1 · Петербург — город кино и музыки',
+    title: 'Петербург — город кино и музыки',
     src: 'assets/chapter-1-petersburg.svg',
     width: W,
     height: CH1_H,
+    accent: '#5a8aa8',
+    sections: 6,
     arrows: [
       arrow('prev', 130, 2305, CH1_H),
       arrow('next', 1790, 2305, CH1_H),
@@ -145,11 +150,40 @@ export const CHAPTERS = [
     },
   },
   {
+    id: 'ch3',
+    title: 'Исаак Шварц',
+    src: 'assets/chapter-3-shvarts.svg',
+    width: W,
+    height: CH3_H,
+    accent: '#c5a47e',
+    sections: 8,
+  },
+  {
+    id: 'ch5',
+    title: 'Музыка Исаака Шварца · Семейный архив',
+    src: 'assets/chapter-5-archive.svg',
+    width: W,
+    height: CH5_H,
+    accent: '#c5a47e',
+    sections: 4,
+    arrows: [
+      arrow('prev', 270, 2338, CH5_H),
+      arrow('next', 1650, 2338, CH5_H),
+    ],
+    archive: {
+      pool: ARCHIVE_TRACKS,
+      slot: { x: 388 / W, y: 1951 / CH5_H, w: 1126 / W, h: 774 / CH5_H },
+      cassettes: cassettes(CH5_H),
+    },
+  },
+  {
     id: 'ch2',
-    title: 'Глава 2 · Владимир Дашкевич',
+    title: 'Владимир Дашкевич',
     src: 'assets/chapter-2-dashkevich.svg',
     width: W,
     height: CH2_H,
+    accent: '#7a9b7d',
+    sections: 6,
   },
   {
     id: 'ch6',
@@ -157,6 +191,8 @@ export const CHAPTERS = [
     src: 'assets/chapter-6-dashkevich-archive.svg',
     width: W,
     height: CH6_H,
+    accent: '#7a9b7d',
+    sections: 4,
     arrows: [
       arrow('prev', 270, 2338, CH6_H),
       arrow('next', 1650, 2338, CH6_H),
@@ -168,18 +204,13 @@ export const CHAPTERS = [
     },
   },
   {
-    id: 'ch3',
-    title: 'Глава 3 · Исаак Шварц',
-    src: 'assets/chapter-3-shvarts.svg',
-    width: W,
-    height: CH3_H,
-  },
-  {
     id: 'ch4',
-    title: 'Глава 4 · По следам Исаака Шварца',
+    title: 'Карта · По следам Исаака Шварца',
     src: 'assets/chapter-4-routes.svg',
     width: W,
     height: CH4_H,
+    accent: '#a98864',
+    sections: 5,
     video: {
       x: 120 / W,
       y: 610 / CH4_H,
@@ -188,20 +219,34 @@ export const CHAPTERS = [
       src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     },
   },
+]
+
+// High-level menu sections. Each section can group multiple chapters that
+// share a topic (composer + their archive). Order here drives the menu
+// and "Дальше →" navigation between chapters.
+export const SECTIONS = [
   {
-    id: 'ch5',
-    title: 'Музыка Исаака Шварца · Семейный архив',
-    src: 'assets/chapter-5-archive.svg',
-    width: W,
-    height: CH5_H,
-    arrows: [
-      arrow('prev', 270, 2338, CH5_H),
-      arrow('next', 1650, 2338, CH5_H),
-    ],
-    archive: {
-      pool: ARCHIVE_TRACKS,
-      slot: { x: 388 / W, y: 1951 / CH5_H, w: 1126 / W, h: 774 / CH5_H },
-      cassettes: cassettes(CH5_H),
-    },
+    id: 'petersburg',
+    title: 'Петербург',
+    subtitle: 'Город кино и музыки',
+    chapterIds: ['ch1'],
+  },
+  {
+    id: 'shvarts',
+    title: 'Исаак Шварц',
+    subtitle: 'История композитора и семейный архив',
+    chapterIds: ['ch3', 'ch5'],
+  },
+  {
+    id: 'dashkevich',
+    title: 'Владимир Дашкевич',
+    subtitle: 'История композитора и семейный архив',
+    chapterIds: ['ch2', 'ch6'],
+  },
+  {
+    id: 'map',
+    title: 'Карта',
+    subtitle: 'По следам Исаака Шварца',
+    chapterIds: ['ch4'],
   },
 ]
